@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block content %}
+<form action="{{ url_for('check_verification')}}" method="post">
+  <input type="hidden" name="phone_number" value="{{ phone_number }}" />
+
+  <p>Enter the token sent to your phone number:</p>
+  <div class="token-wrapper">
+    <input type="text" name="token" id="token" />
+    <input type="submit" value="Verify" />
+  </div>
+</form>
+{% endblock %}
